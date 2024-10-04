@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carte de Tarot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Conteneur de la carte de tarot -->
+    <div class="tarot-container" onclick="flipCard()">
+      <div class="card">
+        <div class="front">
+          <!-- Image pour le dos de la carte de tarot (visible avant de cliquer) -->
+          <img src="./img/tarot-back.png" alt="Dos de la carte de tarot" />
+        </div>
+        <div class="back">
+          <!-- Image qui sera remplacée par une image de prédiction aléatoire -->
+          <img id="prediction-image" src="" alt="Image de prédiction" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Section où la prédiction sera affichée -->
+    <div class="prediction">
+      <p id="prediction-text">Cliquez sur la carte pour une prédiction</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

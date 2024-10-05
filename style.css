@@ -1,10 +1,26 @@
+/* Style pour le texte en haut de la page */
+.header {
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Cinzel Decorative", serif;
+  color: #e2e8fc; /* Couleur dorée */
+  font-size: 1.5vw; /* Ajuste la taille selon la taille de l'écran */
+  text-shadow: 1px 1px 2px #3b3939, /* Ombre noire fine */ 2px 2px 5px #413e3e,
+    /* Deuxième ombre pour renforcer la profondeur */ 3px 3px 8px #464141; /* Ombre plus grande pour l'effet 3D */
+}
+
+.header img.coeur-image {
+  width: auto;
+  height: 2.2vw; /* Ajuste la hauteur de l'image pour qu'elle corresponde au texte */
+  vertical-align: middle; /* Aligne l'image avec le texte */
+}
 /* Style global avec police dorée */
 body {
   font-family: "Cinzel Decorative", serif;
   color: #ffd700; /* Code doré */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100vh;
   margin: 0;
@@ -14,167 +30,15 @@ body {
   position: relative;
 }
 
-/* Couche 1 - étoiles se déplaçant vers le haut */
-body::before {
-  content: "";
+#particles-js {
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  width: 200%;
-  height: 200%;
-  background-image: radial-gradient(2px 2px at 5% 5%, #fff, transparent),
-    radial-gradient(2px 2px at 15% 20%, #fff, transparent),
-    radial-gradient(2px 2px at 25% 10%, #fff, transparent),
-    radial-gradient(2px 2px at 35% 30%, #fff, transparent),
-    radial-gradient(2px 2px at 45% 40%, #fff, transparent),
-    radial-gradient(2px 2px at 55% 15%, #fff, transparent),
-    radial-gradient(2px 2px at 65% 50%, #fff, transparent),
-    radial-gradient(2px 2px at 75% 70%, #fff, transparent),
-    radial-gradient(2px 2px at 85% 90%, #fff, transparent),
-    radial-gradient(2px 2px at 95% 60%, #fff, transparent),
-    radial-gradient(2px 2px at 10% 15%, #fff, transparent),
-    radial-gradient(2px 2px at 20% 35%, #fff, transparent),
-    radial-gradient(2px 2px at 30% 55%, #fff, transparent),
-    radial-gradient(2px 2px at 40% 75%, #fff, transparent),
-    radial-gradient(2px 2px at 50% 95%, #fff, transparent),
-    radial-gradient(2px 2px at 60% 5%, #fff, transparent),
-    radial-gradient(2px 2px at 70% 25%, #fff, transparent),
-    radial-gradient(2px 2px at 80% 45%, #fff, transparent),
-    radial-gradient(2px 2px at 90% 65%, #fff, transparent),
-    radial-gradient(2px 2px at 5% 85%, #fff, transparent),
-    radial-gradient(2px 2px at 15% 95%, #fff, transparent),
-    radial-gradient(2px 2px at 25% 35%, #fff, transparent),
-    radial-gradient(2px 2px at 35% 55%, #fff, transparent),
-    radial-gradient(2px 2px at 45% 75%, #fff, transparent),
-    radial-gradient(2px 2px at 55% 95%, #fff, transparent),
-    radial-gradient(2px 2px at 65% 5%, #fff, transparent),
-    radial-gradient(2px 2px at 75% 25%, #fff, transparent),
-    radial-gradient(2px 2px at 85% 45%, #fff, transparent),
-    radial-gradient(2px 2px at 95% 65%, #fff, transparent);
-  background-repeat: repeat;
-  animation: starsMoveUp 50s linear infinite;
-  z-index: -3;
+  z-index: -1; /* Pour s'assurer que les particules soient en arrière-plan */
+  background-color: #000; /* Fond noir pour l'effet de ciel nocturne */
 }
-
-/* Couche 2 - étoiles se déplaçant vers la droite */
-body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  background-image: radial-gradient(2px 2px at 10% 30%, #fff, transparent),
-    radial-gradient(2px 2px at 10% 30%, #fff, transparent),
-    radial-gradient(2px 2px at 20% 80%, #fff, transparent),
-    radial-gradient(2px 2px at 30% 40%, #fff, transparent),
-    radial-gradient(2px 2px at 40% 20%, #fff, transparent),
-    radial-gradient(2px 2px at 50% 70%, #fff, transparent),
-    radial-gradient(2px 2px at 60% 25%, #fff, transparent),
-    radial-gradient(2px 2px at 70% 55%, #fff, transparent),
-    radial-gradient(2px 2px at 80% 85%, #fff, transparent),
-    radial-gradient(2px 2px at 90% 35%, #fff, transparent),
-    radial-gradient(2px 2px at 5% 45%, #fff, transparent),
-    radial-gradient(2px 2px at 15% 75%, #fff, transparent),
-    radial-gradient(2px 2px at 25% 5%, #fff, transparent),
-    radial-gradient(2px 2px at 35% 25%, #fff, transparent),
-    radial-gradient(2px 2px at 45% 95%, #fff, transparent),
-    radial-gradient(2px 2px at 55% 15%, #fff, transparent),
-    radial-gradient(2px 2px at 65% 35%, #fff, transparent),
-    radial-gradient(2px 2px at 75% 55%, #fff, transparent),
-    radial-gradient(2px 2px at 85% 75%, #fff, transparent),
-    radial-gradient(2px 2px at 95% 95%, #fff, transparent),
-    radial-gradient(2px 2px at 10% 15%, #fff, transparent),
-    radial-gradient(2px 2px at 20% 45%, #fff, transparent),
-    radial-gradient(2px 2px at 30% 65%, #fff, transparent),
-    radial-gradient(2px 2px at 40% 85%, #fff, transparent),
-    radial-gradient(2px 2px at 50% 25%, #fff, transparent),
-    radial-gradient(2px 2px at 60% 5%, #fff, transparent),
-    radial-gradient(2px 2px at 70% 75%, #fff, transparent),
-    radial-gradient(2px 2px at 80% 55%, #fff, transparent),
-    radial-gradient(2px 2px at 90% 15%, #fff, transparent),
-    radial-gradient(2px 2px at 5% 95%, #fff, transparent);
-  background-repeat: repeat;
-  animation: starsMoveRight 60s linear infinite;
-  z-index: -2;
-}
-
-/* Couche 3 - étoiles se déplaçant en diagonale (haut gauche à bas droite) */
-body::before,
-body::after {
-  background-size: cover;
-}
-body::before::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  background-image: radial-gradient(2px 2px at 5% 5%, #fff, transparent),
-    radial-gradient(2px 2px at 10% 90%, #fff, transparent),
-    radial-gradient(2px 2px at 15% 20%, #fff, transparent),
-    radial-gradient(2px 2px at 20% 80%, #fff, transparent),
-    radial-gradient(2px 2px at 25% 25%, #fff, transparent),
-    radial-gradient(2px 2px at 30% 70%, #fff, transparent),
-    radial-gradient(2px 2px at 35% 15%, #fff, transparent),
-    radial-gradient(2px 2px at 40% 60%, #fff, transparent),
-    radial-gradient(2px 2px at 45% 35%, #fff, transparent),
-    radial-gradient(2px 2px at 50% 95%, #fff, transparent),
-    radial-gradient(2px 2px at 55% 10%, #fff, transparent),
-    radial-gradient(2px 2px at 60% 50%, #fff, transparent),
-    radial-gradient(2px 2px at 65% 5%, #fff, transparent),
-    radial-gradient(2px 2px at 70% 90%, #fff, transparent),
-    radial-gradient(2px 2px at 75% 40%, #fff, transparent),
-    radial-gradient(2px 2px at 80% 20%, #fff, transparent),
-    radial-gradient(2px 2px at 85% 85%, #fff, transparent),
-    radial-gradient(2px 2px at 90% 10%, #fff, transparent),
-    radial-gradient(2px 2px at 95% 45%, #fff, transparent),
-    radial-gradient(2px 2px at 5% 60%, #fff, transparent),
-    radial-gradient(2px 2px at 15% 70%, #fff, transparent),
-    radial-gradient(2px 2px at 25% 55%, #fff, transparent),
-    radial-gradient(2px 2px at 35% 30%, #fff, transparent),
-    radial-gradient(2px 2px at 45% 85%, #fff, transparent),
-    radial-gradient(2px 2px at 55% 40%, #fff, transparent),
-    radial-gradient(2px 2px at 65% 65%, #fff, transparent),
-    radial-gradient(2px 2px at 75% 95%, #fff, transparent),
-    radial-gradient(2px 2px at 85% 5%, #fff, transparent),
-    radial-gradient(2px 2px at 95% 75%, #fff, transparent);
-  background-repeat: repeat;
-  animation: starsMoveDiagonal 70s linear infinite;
-  z-index: -1;
-}
-
-/* Animation des étoiles - mouvement vers le haut */
-@keyframes starsMoveUp {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-/* Animation des étoiles - mouvement vers la droite */
-@keyframes starsMoveRight {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/* Animation des étoiles - mouvement en diagonale */
-@keyframes starsMoveDiagonal {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-100%, -100%);
-  }
-}
-
 .front img,
 .back img {
   width: 100%;
@@ -207,7 +71,7 @@ body::before::after {
   border: 5px solid #333; /* Ajouter le cadre ici */
   border-radius: 10px; /* Optionnel : coins arrondis */
   padding: 10px; /* Optionnel : espace entre la carte et le cadre */
-  background-color: #fff; /* Optionnel : couleur de fond du cadre */
+  background-color: #1a1818; /* Optionnel : couleur de fond du cadre */
 }
 
 /* Cacher la face arrière au début */
@@ -238,14 +102,16 @@ body::before::after {
 
 /* Style pour la prédiction avec une taille plus petite et responsive */
 .prediction {
-  font-size: 1.2vw; /* Taille de texte plus petite */
+  font-size: 1.2vw; /* Taille de texte responsive */
   color: #ffffff;
-  margin-top: 20px;
+  margin-bottom: 40px; /* Espace au bas */
   padding: 0 10px;
 }
+
 .prediction {
   text-shadow: 1px 1px 2px #000, 0 0 25px #aaa, 0 0 5px #c9459d;
 }
+
 /* Media query pour petits écrans */
 @media (max-width: 600px) {
   .card {

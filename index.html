@@ -7,10 +7,16 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carte de Tarot</title>
+    <title>L'As de ♥</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   </head>
   <body>
+    <div class="header">
+      <h1>
+        L'AS de <img src="img/coeur.png" alt="Coeur" class="coeur-image" />
+      </h1>
+    </div>
     <!-- Conteneur de la carte de tarot -->
     <div class="tarot-container" onclick="flipCard()">
       <div class="card">
@@ -31,6 +37,78 @@
     </div>
 
     <script src="script.js"></script>
+    <div id="particles-js"></div>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 100 /* Le nombre d'étoiles */,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: "#ffffff" /* Couleur blanche pour les étoiles */,
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000",
+            },
+          },
+          opacity: {
+            value: 0.8,
+            random: true,
+          },
+          size: {
+            value: 3 /* Taille des étoiles */,
+            random: true,
+          },
+          line_linked: {
+            enable: true, // Active les lignes entre les particules
+            distance: 150, // Distance maximale entre les particules pour être liées
+            color: "#4e3754", // Couleur des lignes (blanc ici)
+            opacity: 0.4, // Opacité des lignes
+            width: 1, // Épaisseur des lignes
+          },
+          move: {
+            enable: true,
+            speed: 0.6 /* Vitesse lente pour l'effet étoilé */,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+          },
+        },
+        interactivity: {
+          detect_on: "window",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "repulse" /* Repousser les étoiles au survol */,
+            },
+            onclick: {
+              enable: true,
+              mode: "push" /* Ajouter des étoiles au clic */,
+            },
+            resize: true,
+          },
+          modes: {
+            repulse: {
+              distance: 100,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
   </body>
 </html>
 <!-- test -->

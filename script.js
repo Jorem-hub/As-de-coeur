@@ -76,7 +76,6 @@ const predictions = [
   // "Un nouveau rituel quotidien apportera structure et calme à votre routine.",
   // "Vous trouverez un moyen de contribuer à la communauté autour de vous qui vous apportera de la fierté.",
 ];
-
 // Tableau des images associées aux prédictions
 const predictionImages = [
   "img/image1.jpg",

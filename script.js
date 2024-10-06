@@ -74,7 +74,7 @@ const predictions = [
   "Une amélioration de vos finances viendra soulager une pression que vous ressentiez.",
   "Vous découvrirez une nouvelle musique ou un film qui deviendra l'un de vos favoris.",
   "Un nouveau rituel quotidien apportera structure et calme à votre routine.",
-  // "Vous trouverez un moyen de contribuer à la communauté autour de vous qui vous apportera de la fierté.",
+  "Vous trouverez un moyen de contribuer à la communauté autour de vous qui vous apportera de la fierté.",
 ];
 // Tableau des images associées aux prédictions
 const predictionImages = [

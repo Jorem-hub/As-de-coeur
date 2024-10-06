@@ -11,7 +11,7 @@
 
 .header img.coeur-image {
   width: auto;
-  height: 2.2vw; /* Ajuste la hauteur de l'image pour qu'elle corresponde au texte */
+  height: 3vw; /* Ajuste la hauteur de l'image pour qu'elle corresponde au texte */
   vertical-align: middle; /* Aligne l'image avec le texte */
 }
 /* Style global avec police dorée */
